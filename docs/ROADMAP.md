@@ -23,8 +23,7 @@
 1. Completar la descarga del segundo expediente sin modificar `senace_downloader.py`.
 2. Añadir tests con más variantes de `Content-Disposition` y respuestas HTTP anómalas.
 3. Evaluar si conviene una interfaz sencilla para Windows sin scripts bloqueados por Smart App Control.
-4. Revisar términos/condiciones aplicables antes de publicación pública.
-5. Elegir licencia (por ahora el proyecto de prueba privado no fija una licencia pública).
+4. Seguir revisando cambios en las condiciones y el funcionamiento del portal antes de cada versión estable.
 
 ## Criterio para v1.0
 

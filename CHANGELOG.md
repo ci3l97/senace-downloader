@@ -5,6 +5,8 @@
 - Detección automática de capítulo y subcapítulo desde la tabla de SENACE.
 - Detección más precisa del título del expediente.
 - Verificación limitada al rango indicado con `--desde` y `--hasta`.
+- Licencia MIT y preparación del repositorio para uso público.
+- Escaneo automático de secretos en GitHub Actions.
 
 ## 0.2.0-alpha
 

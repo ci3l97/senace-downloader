@@ -4,7 +4,7 @@ Herramienta **no oficial** para descargar y reconstruir localmente expedientes p
 
 Plataforma objetivo: **Windows 10/11, Python 3.11 o superior**. Sin dependencias externas.
 
-Estado actual: **v0.2.0-alpha privada para pruebas**.
+Estado actual: **v0.2.0-alpha pública para pruebas**.
 
 ## Qué problema resuelve
 
@@ -148,7 +148,7 @@ Los ZIP se validan antes de extraerse para impedir rutas `../` o absolutas.
 
 ## Licencia
 
-Todavía no se ha elegido una licencia pública. Durante esta etapa el objetivo es probar el proyecto en un repositorio privado y decidir la licencia antes de hacerlo público.
+Publicado bajo la [licencia MIT](LICENSE). Se permite usar, copiar, modificar y redistribuir el código conservando el aviso de copyright y la licencia.
 
 ## Estado antes de v1.0
 

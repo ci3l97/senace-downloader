@@ -22,6 +22,7 @@
 - El descargador genérico procesó correctamente los primeros 5 documentos de un segundo expediente real de 504 elementos en Windows, sin modificar `senace_downloader.py`.
 - El DOM del segundo expediente se inspeccionó en el portal: el exportador detecta 22 encabezados y asigna capítulo/subcapítulo a los 504 documentos.
 - Una ejecución limitada con `--desde`/`--hasta` verifica solamente el rango seleccionado.
+- Repositorio público bajo licencia MIT, con escaneo de secretos local y en GitHub Actions.
 
 ## No verificado todavía
 

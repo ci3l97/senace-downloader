@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Credenciales y configuración local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+.npmrc
+.pypirc
+
+# Descargas / expedientes (NUNCA subir gigabytes del EIA)
+descargas/
+*.senace.json
+*.zip
+EIA-d Romina/
+Expediente SENACE/
+*.part
+.senace_tmp/
+_MANIFIESTO_DESCARGA.csv
+_VERIFICACION.txt
+_MANIFIESTO_ORIGINAL_NORMALIZADO.json
+
+# Documentos ambientales y geodatos comunes
+*.pdf
+*.rar
+*.7z
+*.kmz
+*.kml
+*.shp
+*.shx
+*.dbf
+*.prj
+*.gpkg
+*.tif
+*.tiff
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

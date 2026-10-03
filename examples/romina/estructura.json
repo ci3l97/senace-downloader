@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "ranges": [
+    {
+      "desde": 1,
+      "hasta": 9,
+      "ruta": [
+        "01. Ficha Resumen",
+        "02. Ubicación y extensión del proyecto"
+      ]
+    },
+    {
+      "desde": 10,
+      "hasta": 23,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "01. Resumen Ejecutivo"
+      ]
+    },
+    {
+      "desde": 24,
+      "hasta": 69,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "02. Descripción del Proyecto"
+      ]
+    },
+    {
+      "desde": 70,
+      "hasta": 126,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "03. Estudio de la Línea Base Ambiental"
+      ]
+    },
+    {
+      "desde": 127,
+      "hasta": 155,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "04. Plan de Participación Ciudadana"
+      ]
+    },
+    {
+      "desde": 156,
+      "hasta": 169,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "05. Caracterización del Impacto Ambiental"
+      ]
+    },
+    {
+      "desde": 170,
+      "hasta": 179,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "06. Estrategia de Manejo Ambiental"
+      ]
+    },
+    {
+      "desde": 180,
+      "hasta": 182,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "07. Valoración Económica del Impacto Ambiental"
+      ]
+    },
+    {
+      "desde": 183,
+      "hasta": 186,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "08. Empresa Consultora"
+      ]
+    },
+    {
+      "desde": 187,
+      "hasta": 189,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "09. Otras consideraciones técnicas que determine la autoridad competente"
+      ]
+    },
+    {
+      "desde": 190,
+      "hasta": 191,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "10. Opiniones técnicas"
+      ]
+    },
+    {
+      "desde": 192,
+      "hasta": 193,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "11. Bibliografía"
+      ]
+    },
+    {
+      "desde": 194,
+      "hasta": 195,
+      "ruta": [
+        "02. Contenido de Estudio en Cumplimiento de Tdr",
+        "12. Anexos"
+      ]
+    },
+    {
+      "desde": 196,
+      "hasta": 205,
+      "ruta": [
+        "04. Pagos y otros requisitos TUPA",
+        "02. Documentos Adjuntos"
+      ]
+    }
+  ]
+}

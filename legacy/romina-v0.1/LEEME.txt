@@ -1,0 +1,112 @@
+EIA-d ROMINA — DESCARGADOR SENACE
+===================================
+
+Contenido
+---------
+- INICIAR_DESCARGA.bat
+- descargar_romina.py
+- Romina_SENACE_205_documentos.json
+
+El JSON fue comprobado antes de empaquetarlo:
+- 205 elementos
+- números 1 a 205 sin huecos
+- ningún número repetido
+- 205 docId únicos
+
+USO MÁS FÁCIL
+-------------
+1. Extrae este ZIP en cualquier carpeta.
+2. Doble clic en INICIAR_DESCARGA.bat.
+3. Cuando pregunte la carpeta de destino:
+   - pulsa Enter para crear "EIA-d Romina" al lado del programa; o
+   - pega otra ruta.
+4. Si ya tienes una carpeta PLANA con documentos numerados (por ejemplo
+   70 al 97 y 103), pega esa ruta cuando el programa la pida.
+   El programa moverá esos elementos a su capítulo correspondiente y
+   luego evitará volver a descargarlos.
+5. Déjalo trabajar. Si se corta Internet o cierras el programa, ejecútalo
+   otra vez: los elementos completos se saltan.
+
+ESTRUCTURA QUE CREARÁ
+---------------------
+EIA-d Romina
+├─ 01. Ficha Resumen
+│  └─ 02. Ubicación y extensión del proyecto                 [1-9]
+├─ 02. Contenido de Estudio en Cumplimiento de Tdr
+│  ├─ 01. Resumen Ejecutivo                                  [10-23]
+│  ├─ 02. Descripción del Proyecto                           [24-69]
+│  ├─ 03. Estudio de la Línea Base Ambiental                 [70-126]
+│  ├─ 04. Plan de Participación Ciudadana                    [127-155]
+│  ├─ 05. Caracterización del Impacto Ambiental               [156-169]
+│  ├─ 06. Estrategia de Manejo Ambiental                      [170-179]
+│  ├─ 07. Valoración Económica del Impacto Ambiental           [180-182]
+│  ├─ 08. Empresa Consultora                                   [183-186]
+│  ├─ 09. Otras consideraciones técnicas...                    [187-189]
+│  ├─ 10. Opiniones técnicas                                   [190-191]
+│  ├─ 11. Bibliografía                                         [192-193]
+│  └─ 12. Anexos                                               [194-195]
+└─ 04. Pagos y otros requisitos TUPA
+   └─ 02. Documentos Adjuntos                                  [196-205]
+
+ARCHIVOS VS. CARPETAS
+---------------------
+El programa examina lo que realmente devuelve SENACE.
+
+- Si SENACE devuelve un archivo directo (PDF, CSV, KMZ, DOCX, etc.):
+  se guarda con el nombre visible de la lista y su extensión.
+  Ejemplo:
+      112. Capítulo 3 (Texto).pdf
+
+- Si SENACE devuelve un ZIP que representa un conjunto de archivos:
+  crea una carpeta con el nombre EXACTO del elemento y extrae dentro
+  todo el contenido conservando su estructura.
+  Ejemplo:
+      45. Anexo 2.10.10a\
+          ...contenido original del paquete...
+
+- Los KMZ NO se descomprimen.
+- Los DOCX/XLSX/PPTX NO se descomprimen.
+- Los paquetes SHP sí se extraen en la carpeta numerada.
+
+SEGURIDAD / INTEGRIDAD
+----------------------
+- No usa credenciales.
+- Solo descarga las 205 URL públicas presentes en el JSON obtenido
+  desde la página de Consulta Ciudadana de SENACE.
+- Reintenta hasta 4 veces por elemento.
+- La descarga se hace en bloques, por lo que no carga archivos grandes
+  completos en RAM.
+- Evita extracción ZIP con rutas inseguras.
+- Genera:
+    _MANIFIESTO_SENACE.csv
+    _VERIFICACION_1-205.txt
+    _INDICE_ORIGINAL_205.json
+- Para archivos directos registra SHA-256.
+
+SI PYTHON MUESTRA ERROR DE CERTIFICADO
+--------------------------------------
+Abre CMD en esta carpeta y ejecuta:
+
+    py -3 descargar_romina.py --inseguro
+
+Úsalo solo si el error es específicamente de certificado TLS.
+
+DESCARGAR SOLO UN RANGO
+-----------------------
+Ejemplos:
+
+    py -3 descargar_romina.py --desde 98 --hasta 205
+
+o:
+
+    py -3 descargar_romina.py --destino "D:\EIA-d Romina" --desde 1 --hasta 69
+
+IMPORTANTE SOBRE "EXISTENTES"
+-----------------------------
+La carpeta que indiques como "existentes" debe ser PLANA: los elementos
+70., 71., 72., etc. deben ser hijos directos de esa carpeta. El programa
+no escanea recursivamente para evitar confundir archivos internos de un
+anexo con documentos principales del índice.
+
+Al incorporar existentes, los MUEVE (no los copia) para no duplicar
+gigabytes innecesariamente.
